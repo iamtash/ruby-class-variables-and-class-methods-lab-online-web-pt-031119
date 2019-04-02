@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
 
   attr_reader :name, :artist, :genre
@@ -28,6 +30,7 @@ class Song
   end
 
   def self.genre_count
+    @@genres.group_by {|genre| genre}
   end
 
 end
