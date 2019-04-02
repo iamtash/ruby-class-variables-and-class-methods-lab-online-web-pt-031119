@@ -42,6 +42,7 @@ class Song
     @@artist.group_by {|artist| artist}.each do |artist, count_array|
       artist_count[artist] = count_array.length
     end
+    artist_count
   end
 
 end
