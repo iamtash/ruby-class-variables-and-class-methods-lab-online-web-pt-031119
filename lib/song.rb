@@ -30,12 +30,11 @@ class Song
   end
 
   def self.genre_count
-#    binding.pry
     genre_count = {}
     @@genres.group_by {|genre| genre}.each do |genre, count_array|
       genre_count[genre] = count_array.length
     end
-    binding.pry
+    genre_count
   end
 
 end
